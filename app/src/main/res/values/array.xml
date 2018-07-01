@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spingarr">
+    <item>大二 第2学期</item>
+    <item>大二 第1学期</item>
+    <item>大一 第2学期</item>
+    <item>大一 第1学期</item>
+    </string-array>
+</resources>

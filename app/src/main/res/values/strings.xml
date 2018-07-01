@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Timetable</string>
+    <string name="month">某\n月</string>
+    <string name="Monday">周一</string>
+    <string name="Tuesday">周二</string>
+    <string name="Wednesday">周三</string>
+    <string name="Thursday">周四</string>
+    <string name="Friday">周五</string>
+    <string name="Saturday">周六</string>
+    <string name="Sunday">周日</string>
+
+    <string name="计组">计算机组成原理@45楼B304</string>
+    <string name="数据库">数据库原理(双语)@45楼B307</string>
+    <string name="汇编">汇编语言程序设计@45楼B118</string>
+    <string name="程序设计">[非本周]程序设计实践3@未指定</string>
+    <string name="计网">计算机网络(双语)@45楼B118</string>
+    <string name="VR">虚拟现实概论@45楼B203</string>
+    <string name="专外">[非本周]专业外语(英)@33楼114</string>
+    <string name="计产">[非本周]计算机新技术与产业发展@46楼A309</string>
+    <string name="体育">体育D@未指定</string>
+    <string name="大英">大学英语4@46楼A405</string>
+    <string name="算法">[非本周]算法设计与分析(双语)@33楼104</string>
+</resources>

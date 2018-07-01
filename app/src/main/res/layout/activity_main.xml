@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background1"
+    android:orientation="vertical">
+
+    <!--<pl.droidsonroids.gif.GifImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dynamic1" />
+        android:src="@drawable/dynamic1"-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--<Button
+            android:id="@+id/currentWeek"
+            android:layout_width="296dp"
+
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="@string/week"
+            android:textColor="@color/colorAccent" />-->
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="6.5"
+            android:background="@color/lightgoldenrodyellow"
+            android:entries="@array/spingarr"
+            android:gravity="center"
+            android:textColor="@color/fuchsia" />
+        <!-- 感觉设置android:textSize="15sp" 没用-->
+        <TextView
+            android:id="@+id/main_tv_showdate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5.5"
+            android:background="@color/lightgoldenrodyellow"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:text="显示\n日期" />
+        <TextView
+            android:id="@+id/main_tv_showtime"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:background="@color/lightgoldenrodyellow"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:text="显示\n时间" />
+</LinearLayout>
+
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+    <TextView
+        android:text="@string/month"
+
+        android:textColor="@color/colorAccent"
+        android:gravity="center"
+        android:layout_weight="2.3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:id="@+id/month" />
+    <TextView
+        android:text="@string/Monday"
+
+        android:gravity="center"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/colorAccent"
+        android:background="@color/transparent"
+        android:id="@+id/Monday" />
+    <TextView
+        android:text="@string/Tuesday"
+
+        android:gravity="center"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/mediumorchid"
+        android:background="@color/transparent"
+        android:id="@+id/Tuesday" />
+    <TextView
+        android:text="@string/Wednesday"
+
+        android:gravity="center"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/darkgoldenrod"
+        android:background="@color/transparent"
+        android:id="@+id/Wednesday" />
+    <TextView
+        android:text="@string/Thursday"
+
+        android:gravity="center"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/white"
+        android:background="@color/transparent"
+        android:id="@+id/Thursday" />
+    <TextView
+        android:text="@string/Friday"
+
+        android:gravity="center"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/fuchsia"
+        android:background="@color/transparent"
+        android:id="@+id/Friday" />
+    <TextView
+        android:text="@string/Saturday"
+
+        android:gravity="center"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/mediumturquoise"
+        android:background="@color/transparent"
+        android:id="@+id/Saturday" />
+    <TextView
+        android:text="@string/Sunday"
+
+        android:gravity="center"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/limegreen"
+        android:background="@color/transparent"
+        android:id="@+id/Sunday" />
+</LinearLayout>
+
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+    <TextView
+        android:text="08:00\n\n1\n\n10:05"
+        android:gravity="center"
+        android:textColor="@color/darkviolet"
+        android:layout_weight="2.3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:id="@+id/firstClass" />
+    <Button
+        android:text=""
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/lightgoldenrodyellow"
+        android:background="@color/transparent"
+        android:id="@+id/button1"
+        android:onClick="show_Button1"/>
+    <Button
+        android:text="@string/计组"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/lightgoldenrodyellow"
+        android:background="@color/transparent"
+        android:id="@+id/button2"
+        android:onClick="show_Button2"/>
+    <Button
+        android:text="@string/数据库"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/lightgoldenrodyellow"
+        android:background="@color/transparent"
+        android:id="@+id/button3"
+        android:onClick="show_Button3"/>
+    <Button
+        android:text="@string/汇编"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/lightgoldenrodyellow"
+        android:background="@color/transparent"
+        android:id="@+id/button4"
+        android:onClick="show_Button4"/>
+    <Button
+        android:text="@string/程序设计"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/lightgoldenrodyellow"
+        android:background="@color/transparent"
+        android:id="@+id/button5"
+        android:onClick="show_Button5"/>
+    <Button
+        android:text=""
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/lightgoldenrodyellow"
+        android:background="@color/transparent"
+        android:id="@+id/button6"
+        android:onClick="show_Button6"/>
+    <Button
+        android:text=""
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/lightgoldenrodyellow"
+        android:background="@color/transparent"
+        android:id="@+id/button7"
+        android:onClick="show_Button7"/>
+</LinearLayout>
+
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+    <TextView
+        android:text="10:25\n\n2\n\n12:00"
+        android:layout_weight="2.3"
+        android:gravity="center"
+        android:textColor="@color/darkviolet"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:id="@+id/secondClass" />
+    <Button
+        android:text="@string/数据库"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/lightgoldenrodyellow"
+        android:background="@color/transparent"
+        android:id="@+id/button8"
+        android:onClick="show_Button8"/>
+    <Button
+        android:text="@string/汇编"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/lightgoldenrodyellow"
+        android:background="@color/transparent"
+        android:id="@+id/button9"
+        android:onClick="show_Button9"/>
+    <Button
+        android:text="@string/计网"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/lightgoldenrodyellow"
+        android:background="@color/transparent"
+        android:id="@+id/button10"
+        android:onClick="show_Button10"/>
+    <Button
+        android:text="@string/计组"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/lightgoldenrodyellow"
+        android:background="@color/transparent"
+        android:id="@+id/button11"
+        android:onClick="show_Button11"/>
+    <Button
+        android:text="@string/VR"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/lightgoldenrodyellow"
+        android:background="@color/transparent"
+        android:id="@+id/button12"
+        android:onClick="show_Button12"/>
+    <Button
+        android:text=""
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/lightgoldenrodyellow"
+        android:background="@color/transparent"
+        android:id="@+id/button13"
+        android:onClick="show_Button13"/>
+    <Button
+        android:text=""
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/lightgoldenrodyellow"
+        android:background="@color/transparent"
+        android:id="@+id/button14"
+        android:onClick="show_Button14"/>
+</LinearLayout>
+
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+    <TextView
+        android:text="13:30\n\n3\n\n15:05"
+        android:layout_weight="2.3"
+        android:gravity="center"
+        android:textColor="@color/darkviolet"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:id="@+id/thirdClass" />
+    <Button
+        android:text="@string/计网"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/lightgoldenrodyellow"
+        android:background="@color/transparent"
+        android:id="@+id/button15"
+        android:onClick="show_Button15"/>
+    <Button
+        android:text="@string/专外"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/lightgoldenrodyellow"
+        android:background="@color/transparent"
+        android:id="@+id/button16"
+        android:onClick="show_Button16"/>
+    <Button
+        android:text="@string/计产"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/lightgoldenrodyellow"
+        android:background="@color/transparent"
+        android:id="@+id/button17"
+        android:onClick="show_Button17"/>
+    <Button
+        android:text="@string/体育"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/lightgoldenrodyellow"
+        android:background="@color/transparent"
+        android:id="@+id/button18"
+        android:onClick="show_Button18"/>
+    <Button
+        android:text=""
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/lightgoldenrodyellow"
+        android:background="@color/transparent"
+        android:id="@+id/button19"
+        android:onClick="show_Button19"/>
+    <Button
+        android:text=""
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/lightgoldenrodyellow"
+        android:background="@color/transparent"
+        android:id="@+id/button20"
+        android:onClick="show_Button20"/>
+    <Button
+        android:text=""
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="@color/lightgoldenrodyellow"
+        android:background="@color/transparent"
+        android:id="@+id/button21"
+        android:onClick="show_Button21"/>
+</LinearLayout>
+
+<LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <TextView
+            android:text="15:25\n\n4\n\n17:00"
+            android:layout_weight="2.3"
+            android:gravity="center"
+            android:textColor="@color/darkviolet"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:id="@+id/fourthClass" />
+        <Button
+            android:text="@string/大英"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/lightgoldenrodyellow"
+            android:background="@color/transparent"
+            android:id="@+id/button22"
+            android:onClick="show_Button22"/>
+
+        <Button
+            android:text="@string/算法"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@color/transparent"
+            android:textColor="@color/lightgoldenrodyellow"
+            android:id="@+id/button23"
+            android:onClick="show_Button23"/>
+        <Button
+            android:text="@string/VR"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/lightgoldenrodyellow"
+            android:background="@color/transparent"
+            android:id="@+id/button24"
+            android:onClick="show_Button24"/>
+        <Button
+            android:text="@string/专外"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/lightgoldenrodyellow"
+            android:background="@color/transparent"
+            android:id="@+id/button25"
+            android:onClick="show_Button25"/>
+        <Button
+            android:text=""
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/lightgoldenrodyellow"
+            android:background="@color/transparent"
+            android:id="@+id/button26"
+            android:onClick="show_Button26"/>
+        <Button
+            android:text=""
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/lightgoldenrodyellow"
+            android:background="@color/transparent"
+            android:id="@+id/button27"
+            android:onClick="show_Button27"/>
+        <Button
+            android:text=""
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/lightgoldenrodyellow"
+            android:background="@color/transparent"
+            android:id="@+id/button28"
+            android:onClick="show_Button28"/>
+    </LinearLayout>
+
+<!-- <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <TextView
+            android:text="08:00\n\n5\n\n10:05"
+            android:layout_weight="2.3"
+            android:gravity="center"
+            android:textColor="@color/darkviolet"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:id="@+id/fifthClass" />
+        <Button
+            android:text="C#程序设计实践语言与.NET框架基础(双语)"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/lightgoldenrodyellow"
+            android:background="@color/transparent"
+            android:id="@+id/button29" />
+        <Button
+            android:text="移动平台应用开发@46楼A306"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/lightgoldenrodyellow"
+            android:background="@color/transparent"
+            android:id="@+id/button30" />
+        <Button
+            android:text="物理实验B@未指定"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/lightgoldenrodyellow"
+            android:background="@color/transparent"
+            android:id="@+id/button31" />
+        <Button
+            android:text="移动平台应用开发@46楼A306"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/lightgoldenrodyellow"
+            android:background="@color/transparent"
+            android:id="@+id/button32" />
+        <Button
+            android:text=""
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:background="@color/transparent"
+            android:id="@+id/button33" />
+        <Button
+            android:text=""
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:background="@color/transparent"
+            android:id="@+id/button34" />
+        <Button
+            android:text=""
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:background="@color/transparent"
+            android:id="@+id/button35" />
+    </LinearLayout> -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_weight="0.1"
+        android:gravity="bottom"
+        android:orientation="vertical" >
+        <Button
+            android:id="@+id/change"
+            android:text="课程信息修改"
+            android:textColor="@color/lightgoldenrodyellow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:background="@color/transparent"
+            android:onClick="click_changeButton" />
+    </LinearLayout>
+
+    </LinearLayout>

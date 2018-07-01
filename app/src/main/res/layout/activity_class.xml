@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background5"
+    android:orientation="vertical">
+
+    <!--<LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="周数\n修改"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:background="@color/transparent"
+            android:id="@+id/textView1" />
+        <EditText
+            android:id="@+id/edit_week"
+            android:textSize="18sp"
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:imeOptions="actionSearch"/>
+        <Button
+            android:id="@+id/btn_change_week"
+            android:text="Week\n确认"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:textColor="@color/black"
+            android:background="@color/transparent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+      <TextView
+          android:id="@+id/main_tv_showdate"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="3"
+          android:gravity="right"
+          android:textColor="@color/lightgoldenrodyellow"
+          android:textSize="20sp"
+          android:text="显示\n日期" />
+    <TextView
+        android:id="@+id/main_tv_showtime"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="left"
+        android:textColor="@color/lightgoldenrodyellow"
+        android:textSize="20sp"
+        android:text="显示\n时间" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="输入\n时间"
+            android:textColor="@color/lightgoldenrodyellow"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/edit_time"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:imeOptions="actionSearch"
+            android:textColor="@color/lightgoldenrodyellow"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_input_time"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="Time\n确认"
+            android:textColor="@color/lightgoldenrodyellow"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="课程\n修改"
+            android:textColor="@color/lightgoldenrodyellow"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/edit_class"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:imeOptions="actionSearch"
+            android:textColor="@color/lightgoldenrodyellow"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_change_class"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="Class\n确认"
+            android:textColor="@color/lightgoldenrodyellow"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

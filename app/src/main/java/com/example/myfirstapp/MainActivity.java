@@ -17,6 +17,7 @@ import pl.droidsonroids.gif.GifImageView;
 
 public class MainActivity extends Activity implements Button.OnClickListener{
 
+    //小小测试GitHub
     //GifImageView gifImageView = (GifImageView) findViewById(R.id.image);
     public SharedPreferences pref;
     public SharedPreferences.Editor editor;

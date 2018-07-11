@@ -1,12 +1,18 @@
 package com.example.myfirstapp;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.app.Activity;
 import android.os.Handler;
 import android.os.Message;
 import android.preference.PreferenceManager;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -23,6 +29,15 @@ public class ShowActivity extends Activity implements Button.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //沉浸式状态栏,背景和当前activity一样
+        if(Build.VERSION.SDK_INT>= Build.VERSION_CODES.KITKAT) {
+            //透明状态栏
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            //透明导航栏
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+        }
+
         setContentView(R.layout.activity_show);
         //获取textView控件
         tvRealTime = (TextView) findViewById(R.id.real_time);
@@ -45,17 +60,35 @@ public class ShowActivity extends Activity implements Button.OnClickListener{
             @Override
             public void onClick(View v) {
                 Toast.makeText(ShowActivity.this, editName.getText().toString(), Toast.LENGTH_SHORT).show();
-                editor = pref.edit();
-                editor.putString("teacher" + flag, editTeacher.getText().toString());
-                editor.putString("week" + flag, editWeek.getText().toString());
-                editor.putString("place" + flag, editPlace.getText().toString());
-                editor.putString("number" + flag, editNumber.getText().toString());
-                editor.putString("name" + flag, editName.getText().toString());
-                editor.apply();
-                finish();
+                AlertDialog.Builder dialog = new AlertDialog.Builder(ShowActivity.this);
+                dialog.setTitle("This is Dialog");
+                dialog.setMessage("确认修改么?");
+                dialog.setCancelable(false);
+                dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        editor = pref.edit();
+                        editor.putString("teacher" + flag, editTeacher.getText().toString());
+                        editor.putString("week" + flag, editWeek.getText().toString());
+                        editor.putString("place" + flag, editPlace.getText().toString());
+                        editor.putString("number" + flag, editNumber.getText().toString());
+                        editor.putString("name" + flag, editName.getText().toString());
+                        editor.apply();
+                        finish();
+                    }
+                });
+                dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                dialog.show();
+
             }
         });
     }
+
     //写一个新的线程每隔一秒发送一次消息,这样做会和系统时间相差1秒
     public class TimeThread extends Thread{
         @Override

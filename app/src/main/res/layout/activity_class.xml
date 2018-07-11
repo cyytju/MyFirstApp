@@ -3,43 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
     android:background="@drawable/background5"
     android:orientation="vertical">
 
-    <!--<LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:text="周数\n修改"
-            android:textSize="18sp"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:textColor="@color/black"
-            android:background="@color/transparent"
-            android:id="@+id/textView1" />
-        <EditText
-            android:id="@+id/edit_week"
-            android:textSize="18sp"
-            android:layout_weight="4"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:textColor="@color/black"
-            android:imeOptions="actionSearch"/>
-        <Button
-            android:id="@+id/btn_change_week"
-            android:text="Week\n确认"
-            android:textSize="18sp"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:textColor="@color/black"
-            android:background="@color/transparent"
-            android:layout_height="match_parent"/>
-    </LinearLayout>-->
+    <!--  -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -85,6 +54,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="4"
+            android:hint="周几第几节"
+            android:maxLines="1"
             android:imeOptions="actionSearch"
             android:textColor="@color/lightgoldenrodyellow"
             android:textSize="18sp" />
@@ -97,6 +68,7 @@
             android:background="@color/transparent"
             android:gravity="center"
             android:text="Time\n确认"
+            android:textAllCaps="false"
             android:textColor="@color/lightgoldenrodyellow"
             android:textSize="18sp" />
     </LinearLayout>
@@ -122,6 +94,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="4"
+            android:hint="请输入课程名称"
+            android:maxLines="2"
             android:imeOptions="actionSearch"
             android:textColor="@color/lightgoldenrodyellow"
             android:textSize="18sp" />
@@ -134,9 +108,9 @@
             android:background="@color/transparent"
             android:gravity="center"
             android:text="Class\n确认"
+            android:textAllCaps="false"
             android:textColor="@color/lightgoldenrodyellow"
             android:textSize="18sp" />
     </LinearLayout>
-
 
 </LinearLayout>
